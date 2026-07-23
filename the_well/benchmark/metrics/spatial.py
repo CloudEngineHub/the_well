@@ -215,7 +215,7 @@ class VMSE(Metric):
         Returns:
             Variance mean squared error between x and y.
         """
-        return NMSE.eval(x, y, meta, norm_mode="std")
+        return NMSE.eval(x, y, meta, eps=eps, norm_mode="std")
 
 
 class VRMSE(Metric):
@@ -237,7 +237,7 @@ class VRMSE(Metric):
         Returns:
             Root variance mean squared error between x and y.
         """
-        return NRMSE.eval(x, y, meta, norm_mode="std")
+        return NRMSE.eval(x, y, meta, eps=eps, norm_mode="std")
 
 
 class LInfinity(Metric):
